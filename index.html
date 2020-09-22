@@ -9,55 +9,66 @@
 <body id="pagelayout">
     <div class= "container">
         <div id = "form-header">
-        <h1> Please fill this form </h1>
+            <h1> Please fill this form </h1>
         </div>
-        <form class = "myform">
-             <div class = "category">
+
+    
+
+        <form class = "myform" id="form" action="cv.html" onsubmit="return validate()">
+             <div class = "category" >
                  <label for = "first">First</label>
                <input type= "text" id="first" name= "first_name" placeholder="First Name">
+               <span id="firsterror" class="textdanger"></span>
              </div>
 
              <div class = "category">
                 <label for= "middle">Middle</label>
-                <input type= "text" id="middle" name= "middle_name" placeholder= "Middle Name">
+                <input type= "text" id="middle" name= "middle_name" placeholder= "Middle Name"> 
+                <span id="middleerror" class="textdanger"></span>
             </div>
 
              <div class = "category">
                  <label for= "last">Last</label>
                  <input type= "text" id="last" name= "last_name" placeholder= "Last Name">
-             </div>
-
-             <div class= "category">
-                 <label for="gender">Gender</label>
-                 <select class="option" name="gender">
-                 <option disabled= "disabled" selected= "selected">Choose Option </option>
-                 <option>Male</option>
-                 <option>Female</option>
-                 </select>
+                 <span id="lasterror" class="textdanger"></span>
              </div>
 
 
              <div class="category">
                 <label for= "address">Address</label>
-                <input type="text" id="adress" name="adress" placeholder= "Address">
+                <input type="text" id="address" name="adress" placeholder= "Address">
+                <span id="addresserror" class="textdanger"></span>
             </div>
 
              <div class ="category">
                 <label for="number">Number</label>
-                <input type="text" id= "phone_number" name="number" placeholder= "phone number">
+                <input type="text" id= "number" name="number" placeholder= "phone number">
+                <span id="numbererror" class="textdanger"></span>
             </div>
 
 
              <div class ="category">
                  <label for= "email">Email</label>
                  <input type= "email" id= "email" name="email" placeholder= "name@ashesi.edu.gh">
+                 <span id="emailerror" class="textdanger"></span>
              </div>
 
+             <div class= "category">
+                <label for="gender">Gender</label>
+                <select style = "padding:5px;" class="option" id="gender" name="Gender">
+                <option disabled= "disabled" selected= "selected" value="-1">Choose Option </option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <span id="emailerror" class="textdanger"></span>
+                </select>
+            </div>
+
              <div>
-                <button id= "submitbutton" type="submit" value="submit">Sumbit</button>
-             </div>        
+                <button id= "submit" type="submit">Sumbit</button>
+             </div>   
+                
         </form>
     </div>
-    
+
 </body>
 </html>
