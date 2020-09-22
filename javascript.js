@@ -56,7 +56,38 @@ function validate(){
 }
 
 
+ function infostorage (){
+    const first = document.getElementById("first").value;
+    const middle =  document.getElementById("middle").value;
+    const last =  document.getElementById("last").value;
+    const number = document.getElementById("number").value;
+    const email = document.getElementById("email").value;
+    const address = document.getElementById("address").value; 
 
+
+    localStorage.setItem("first", first);
+    localStorage.setItem("middle", middle);
+    localStorage.setItem("last", last);
+    localStorage.setItem("number", number);
+    localStorage.setItem("email", email);
+    localStorage.setItem("address", address);
+
+    return;
+
+ }
+
+ function cveditor(){
+    const first = localStorage.getItem("first");
+    const middle = localStorage.getItem("middle");
+    const last = localStorage.getItem("last");
+    const number = localStorage.getItem("number");
+    const email = localStorage.getItem("email");
+    const address= localStorage.getItem("address");
+
+    document.getElementById("mainheader").innerHTML= "<ul> <li id= \"fname\"> " +first +" </li> <li id= \"mname\"> "+middle+" </li><li id= \"lname\"> "+last +" </li></ul><p id= \"gender\"> "+gender+" </p><p id = \"postaladress\"> "+address+" </p><p id = \"number\"> "+number+" </p><p id = \"email\"> "+email+" </p>";
+
+    return;
+ }
 
 
 
