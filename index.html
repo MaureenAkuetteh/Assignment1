@@ -12,7 +12,7 @@
             <h1> Please fill this form </h1>
         </div>
 
-    
+    <!-- Creating the form  -->
 
         <form class = "myform" id="form" action="cv.html" onsubmit="return validate()">
              <div class = "category" >
@@ -56,16 +56,12 @@
              <div class= "category">
                 <label for="gender">Gender</label>
                 <select style = "padding:5px;" class="option" id="gender" name="Gender">
-                <option disabled= "disabled" selected= "selected" value="-1">Choose Option </option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <span id="emailerror" class="textdanger"></span>
+                <option value="choose gender">Choose Option </option>
+                <option value="2">Male</option>
+                <option value="3">Female</option>
+                <span id="gendererror" class="textdanger"></span>
                 </select>
             </div>
-
-            <div>
-                <button id= "view" type="submit">View</button>
-             </div> 
 
              <div>
                 <button id= "submit" type="submit" onclick="infostorage()">Sumbit</button>

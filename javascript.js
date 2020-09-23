@@ -6,11 +6,12 @@ function validate(){
     const number = document.getElementById("number").value;
     const email = document.getElementById("email").value;
     const address = document.getElementById("address").value; 
+    const gender = document.getElementById("gender").value;
     
 
     const namecheck = /^[A-Za-z]{3,30}$/;
     const emailcheck = /^[A-Za-z_.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
-    const phonecheck = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+    const phonecheck = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\/0-9]*$/
     const addresscheck = /^[#.0-9a-zA-Z\s,-]+$/;
    
 
@@ -51,8 +52,7 @@ function validate(){
         document.getElementById('emailerror').innerHTML="Email is Invalid";
         return false;
     }
-     
-    
+  
 }
 
 
@@ -63,6 +63,7 @@ function validate(){
     const number = document.getElementById("number").value;
     const email = document.getElementById("email").value;
     const address = document.getElementById("address").value; 
+    
 
 
     localStorage.setItem("first", first);
@@ -71,6 +72,7 @@ function validate(){
     localStorage.setItem("number", number);
     localStorage.setItem("email", email);
     localStorage.setItem("address", address);
+   
 
     return;
 
@@ -83,8 +85,9 @@ function validate(){
     const number = localStorage.getItem("number");
     const email = localStorage.getItem("email");
     const address= localStorage.getItem("address");
+    
 
-    document.getElementById("mainheader").innerHTML= "<ul> <li id= \"fname\"> " +first +" </li> <li id= \"mname\"> "+middle+" </li><li id= \"lname\"> "+last +" </li></ul><p id= \"gender\"> "+gender+" </p><p id = \"postaladress\"> "+address+" </p><p id = \"number\"> "+number+" </p><p id = \"email\"> "+email+" </p>";
+    document.getElementById("mainheader").innerHTML= "<ul> <li id= \"fname\"> " +first +" </li> <li id= \"mname\"> "+middle+" </li><li id= \"lname\"> "+last +" </li><p id = \"postaladress\"> "+address+" </p><p id = \"number\"> "+number+" </p><p id = \"email\"> "+email+" </p>";
 
     return;
  }

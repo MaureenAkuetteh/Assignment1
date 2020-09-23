@@ -60,21 +60,14 @@
    
 }
 
-#view {
+#submit {
     float:right;
     position:relative;
     margin-bottom:60px; 
     top:-40px;  
 }
 
-#submit {
-    float:right;
-    position:relative;
-    margin-bottom:60px; 
-    top:-40px; 
-    right: 20px;
 
-}
 
 
 /* styling for the CV  */
