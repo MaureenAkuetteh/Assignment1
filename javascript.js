@@ -6,7 +6,7 @@ function validate(){
     const number = document.getElementById("number").value;
     const email = document.getElementById("email").value;
     const address = document.getElementById("address").value; 
-    const gender = document.getElementById("gender").value;
+    
     
 
     const namecheck = /^[A-Za-z]{3,30}$/;
