@@ -62,7 +62,9 @@ function validate(){
     const last =  document.getElementById("last").value;
     const number = document.getElementById("number").value;
     const email = document.getElementById("email").value;
-    const address = document.getElementById("address").value; 
+    const address = document.getElementById("address").value;
+    const gender = document.getElementById("gender").value; 
+    
     
 
 
@@ -72,6 +74,7 @@ function validate(){
     localStorage.setItem("number", number);
     localStorage.setItem("email", email);
     localStorage.setItem("address", address);
+    localStorage.setItem('gender',gender);
    
 
     return;
@@ -85,9 +88,10 @@ function validate(){
     const number = localStorage.getItem("number");
     const email = localStorage.getItem("email");
     const address= localStorage.getItem("address");
+    const gender= localStorage.getItem('gender')
     
 
-    document.getElementById("mainheader").innerHTML= "<ul> <li id= \"fname\"> " +first +" </li> <li id= \"mname\"> "+middle+" </li><li id= \"lname\"> "+last +" </li><p id = \"postaladress\"> "+address+" </p><p id = \"number\"> "+number+" </p><p id = \"email\"> "+email+" </p>";
+    document.getElementById("mainheader").innerHTML= "<ul> <li id= \"fname\"> " +first +" </li> <li id= \"mname\"> "+middle+" </li><li id= \"lname\"> "+last +" </li> </ul><p id= \"gender\"> "+gender+" </p><p id = \"postaladress\"> "+address+" </p><p id = \"number\"> "+number+" </p><p id = \"email\"> "+email+" </p>";
 
     return;
  }
